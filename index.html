@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Reset CSS -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset-min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+  <!-- Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  <!-- Custom css-->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+  <!-- Browser Tab Icon-->
+  <!-- <link rel="icon" href="./assets/images/bs32.png"> -->
+  <title>RPS - MULTIPLAYER</title>
+</head>
+
+<body>
+
+  <div class="nav-container">
+    <nav class="navbar navbar-expand-sm navbar-light ">
+      <div id="hmlogo" class="site-name"><img src="assets/images/logo.png" alt="logo"></div>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <input class="btn btn-danger menu" id="reset" type="button" value="Reset" onclick="this.blur();">
+          <input class="btn btn-danger menu" id="rules" type="button" value="Rules" onclick="this.blur();">
+          <input class="btn btn-danger menu" id="about" type="button" value="About" onclick="this.blur();">
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container-fluid main-container">
+
+    <div id="info-wrapper">  </div>
+
+    <div id="game-wrapper">  </div>
+
+  </div>
+
+  <div class="container-fluid footer-container">
+    <div class="footer-sub">
+      <div class="left-side">
+        <span>UT-Austin Coding Bootcamp</span>
+      </div>
+      <div class="right-side copyright">
+        <p>© 2019 Copyright:
+          <a href="https://williamstephan.github.io">Oldguy.dev</a></p>
+      </div>
+    </div>
+  </div><!-- .container-fluid .footer-container -->
+
+
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA3TqYiyT4gE11k0ZSWZf0sVl5Q7gWwQto",
+    authDomain: "bootcamp-6ad6e.firebaseapp.com",
+    databaseURL: "https://bootcamp-6ad6e.firebaseio.com",
+    projectId: "bootcamp-6ad6e",
+    storageBucket: "bootcamp-6ad6e.appspot.com",
+    messagingSenderId: "915239186690",
+    appId: "1:915239186690:web:f5e9faadef74ed0401521b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+
+
+  
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom JavaScript -->
+
+  <script src="./assets/js/app.js"></script>
+
+
+</body>
+</html>
