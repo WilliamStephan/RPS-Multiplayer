@@ -30,12 +30,12 @@
   <div class="nav-container">
     <nav class="navbar navbar-expand-sm navbar-light ">
       <div id="hmlogo" class="site-name"><img src="assets/images/logo.png" alt="logo"></div>
-      
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <input class="btn btn-danger menu" id="reset" type="button" value="Reset" onclick="this.blur();">
@@ -48,9 +48,77 @@
 
   <div class="container-fluid main-container">
 
-    <div id="info-wrapper">  </div>
+    <h2>Modal Example</h2>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myLogin">Open Modal</button>
 
-    <div id="game-wrapper">  </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myLogin" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          </div>
+          <div class="modal-body">
+
+
+
+
+
+            <form action="/action_page.php" method="post">
+              <div class="imgcontainer">
+
+              </div>
+
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button class="loginbutton" type="submit">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="loginbutton" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+
+
+
+
+
+
+
+
+
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <p>This is some footer text.</p>
+            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+    <div id="info-wrapper"> </div>
+
+    <div id="game-wrapper"> </div>
 
   </div>
 
@@ -70,46 +138,47 @@
 
 
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyA3TqYiyT4gE11k0ZSWZf0sVl5Q7gWwQto",
-    authDomain: "bootcamp-6ad6e.firebaseapp.com",
-    databaseURL: "https://bootcamp-6ad6e.firebaseio.com",
-    projectId: "bootcamp-6ad6e",
-    storageBucket: "bootcamp-6ad6e.appspot.com",
-    messagingSenderId: "915239186690",
-    appId: "1:915239186690:web:f5e9faadef74ed0401521b"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA3TqYiyT4gE11k0ZSWZf0sVl5Q7gWwQto",
+      authDomain: "bootcamp-6ad6e.firebaseapp.com",
+      databaseURL: "https://bootcamp-6ad6e.firebaseio.com",
+      projectId: "bootcamp-6ad6e",
+      storageBucket: "bootcamp-6ad6e.appspot.com",
+      messagingSenderId: "915239186690",
+      appId: "1:915239186690:web:f5e9faadef74ed0401521b"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
 
 
-  
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
 
   <!-- Custom JavaScript -->
-
+  <script src="./assets/js/firestore.js"></script>
   <script src="./assets/js/app.js"></script>
 
 
 </body>
+
 </html>
