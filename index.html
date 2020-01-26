@@ -39,69 +39,107 @@
   <div class="container-fluid main-container">
 
 
-    <div class="modal fade" id="myLogin" role="dialog">
-      <!-- modal login dialog -->
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div id="login-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">RPS Nation Login</h4>
-          </div>
-          <div id="login-info" class="container modal-body">
-            <label id="label-user" for="user-name"><b>Username</b></label>
-            <input id="user-name" type="text" placeholder="Enter Username" name="uname" required>
-            <label id="label-password" for="current-password"><b>Password</b></label>
-            <input id="current-password" type="password" placeholder="Enter Password" name="psw" required>
-            <button class="loginbutton" type="submit">Login</button>
-          </div>
-          <div id="login-footer">
-            <div id="login-checkbox">
-              <input type="checkbox" checked="checked" name="remember"> Remember me
+    <div class="container-fluid main-container">
+
+      <div>
+        <img border="0" id="status-label" alt="Status" src="assets/images/status.png">
+        <div id="status-view" class="display-box">
+          No data!
+        </div>
+
+      </div>
+
+
+      <div id="container-gestures">
+        <div id="rock" class="gesture">
+          <img border="0" alt="Rock" src="assets/images/rock.png">
+        </div>
+        <div id="paper" class="gesture">
+          <img border="0" alt="Paper" src="assets/images/paper.png">
+        </div>
+        <div id="scissors" class="gesture">
+          <img border="0" alt="Scissors" src="assets/images/scissors.png">
+        </div>
+      </div>
+      <div id="chat-box">
+        <img border="0" id="chat-label" alt="Chat-Box" src="assets/images/chatbox.png">
+        <div id="chat-view" class="display-box">
+          As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a
+          scroll box! You could also place an image into the scroll box.
+        </div>
+      </div>
+      <div id="container-write">
+        <input class="btn btn-danger menu" id="send" type="button" value="Send" onclick="this.blur();">
+        <textarea id="chat-write" maxlength="256">
+        At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. Here's some more typing to see how the text box works with longer data
+        </textarea>
+
+      </div>
+
+
+      <div class="modal fade" id="myLogin" role="dialog">
+        <!-- modal login dialog -->
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div id="login-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">RPS Nation Login</h4>
             </div>
-            <div id="login-forgot">
-              <span class="psw">Forgot <a href="#">password?</a></span>
+            <div id="login-info" class="container modal-body">
+              <label id="label-user" for="user-name"><b>Username</b></label>
+              <input id="user-name" type="text" placeholder="Enter Username" name="uname" required>
+              <label id="label-password" for="current-password"><b>Password</b></label>
+              <input id="current-password" type="password" placeholder="Enter Password" name="psw" required>
+              <button class="loginbutton" type="submit">Login</button>
+            </div>
+            <div id="login-footer">
+              <div id="login-checkbox">
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </div>
+              <div id="login-forgot">
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
             </div>
           </div>
         </div>
+      </div><!-- modal login dialog -->
+
+
+    </div><!-- .container-fluid .main-container -->
+
+
+    <!-- Footer -->
+    <div class="container-fluid footer-container">
+      <div class="footer-sub">
+        <div class="left-side">
+          <span>UT-Austin Coding Bootcamp</span>
+        </div>
+        <div class="right-side copyright">
+          <p>© 2019 Copyright:
+            <a href="https://williamstephan.github.io">Oldguy.dev</a></p>
+        </div>
       </div>
-    </div><!-- modal login dialog -->
+    </div><!-- .container-fluid .footer-container -->
 
 
-  </div><!-- .container-fluid .main-container -->
+    <!-- Firebase init (firebase-app.js, products & init.js order) -->
+    <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
 
+    <!-- Helper libs (jQuery, Popper & Bootstrap order) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 
-  <!-- Footer -->
-  <div class="container-fluid footer-container">
-    <div class="footer-sub">
-      <div class="left-side">
-        <span>UT-Austin Coding Bootcamp</span>
-      </div>
-      <div class="right-side copyright">
-        <p>© 2019 Copyright:
-          <a href="https://williamstephan.github.io">Oldguy.dev</a></p>
-      </div>
-    </div>
-  </div><!-- .container-fluid .footer-container -->
-
-
-  <!-- Firebase init (firebase-app.js, products & init.js order) -->
-  <script src="/__/firebase/7.7.0/firebase-app.js"></script>
-  <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
-  <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
-  <script src="/__/firebase/init.js"></script>
-
-  <!-- Helper libs (jQuery, Popper & Bootstrap order) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
-
-  <!-- Custom JavaScript -->
-  <script src="./assets/js/firestore.js"></script>
-  <script src="./assets/js/app.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/firestore.js"></script>
+    <script src="./assets/js/app.js"></script>
 
 </body>
 
