@@ -1,21 +1,12 @@
 console.log("connected firebase.js");
 
-
-
-
-
-
-
 var db = firebase.firestore();
-
-
-
-
 
 function logActivity() {
 
     let activityData = {};
-    $.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function (data) {
+
+    $.getJSON('https://ssl.geoplugin.net/json.gp?k=207167b5568cc2a4', function (data) {
             // loading object for activity creation of Firebase activity document  
             ipAddress = data.geoplugin_request;
             activityData = {

@@ -31,7 +31,6 @@ body {
 .navbar {
     max-width: 960px;
     width: 100%;
-
     padding-right: 0;
     padding-left: 0;
     background-color: #666666;
@@ -61,7 +60,6 @@ body {
     width: 12.63rem;
 }
 
-
 /* navbar button formating */
 
 #rules,
@@ -75,7 +73,6 @@ body {
 #about {
     margin-right: 0.3rem;
 }
-
 
 /* footer formating */
 
@@ -156,31 +153,31 @@ input[type=password] {
     padding: 1rem;
 }
 
-#l-passwd {
+#label-password {
     margin-top: 0.5rem;
 }
 
-#loginheader,
-#loginfooter {
+#login-header,
+#login-footer {
     background-color: #f1f1f1;
     height: 3rem;
 }
 
-#loginheader {
+#login-header {
     padding: 0.2rem 0.5rem 0rem 0.5rem;
 }
 
-#loginfooter {
+#login-footer {
     display: flex;
     width: 100%;
     padding: 0.8rem 0.5rem 0rem 0.5rem;
     justify-content: space-between;
 }
 
-#cb1 {
+#login-checkbox {
     text-align: left;
 }
 
-#f-passwd {
+#login-forgot {
     text-align: right;
 }

@@ -2,43 +2,33 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
+  <!-- Metadata -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Reset CSS -->
-  <link rel="stylesheet" type="text/css" href="./assets/css/reset-min.css">
-
-  <!-- Bootstrap CSS -->
+  <!-- CSS stylesheets -->
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.3.0/firebase-ui-auth.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
     integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset-min.css"><!-- Reset CSS -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css"><!-- Custom css-->
 
-  <!-- Google Fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-
-  <!-- Custom css-->
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-
-  <!-- Browser Tab Icon-->
-  <!-- <link rel="icon" href="./assets/images/bs32.png"> -->
   <title>RPS - MULTIPLAYER</title>
 </head>
 
 <body>
-
+  <!-- Navigation - top -->
   <div class="nav-container">
     <nav class="navbar navbar-expand-sm navbar-light ">
       <div id="hmlogo" class="site-name"><img src="assets/images/logo.png" alt="logo"></div>
-
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <input class="btn btn-danger menu" id="reset" type="button" value="Reset" onclick="this.blur();">
+          <input class="btn btn-danger menu" id="reset" type="button" value="Login" onclick="this.blur();">
           <input class="btn btn-danger menu" id="rules" type="button" value="Rules" onclick="this.blur();">
           <input class="btn btn-danger menu" id="about" type="button" value="About" onclick="this.blur();">
         </div>
@@ -48,50 +38,39 @@
 
   <div class="container-fluid main-container">
 
-    <h2>Modal Example</h2>
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myLogin">Open Modal</button>
 
-    <!-- Modal -->
     <div class="modal fade" id="myLogin" role="dialog">
+      <!-- modal login dialog -->
       <div class="modal-dialog">
-        <!-- Modal content-->
         <div class="modal-content">
-          <form action="/action_page.php" method="post">
-            <div id="loginheader">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">RPSMuti Login</h4>
+          <div id="login-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">RPS Nation Login</h4>
+          </div>
+          <div id="login-info" class="container modal-body">
+            <label id="label-user" for="user-name"><b>Username</b></label>
+            <input id="user-name" type="text" placeholder="Enter Username" name="uname" required>
+            <label id="label-password" for="current-password"><b>Password</b></label>
+            <input id="current-password" type="password" placeholder="Enter Password" name="psw" required>
+            <button class="loginbutton" type="submit">Login</button>
+          </div>
+          <div id="login-footer">
+            <div id="login-checkbox">
+              <input type="checkbox" checked="checked" name="remember"> Remember me
             </div>
-            <div id="login-info" class="container">
-              <label for="uname"><b>Username</b></label>
-              <input id="t-usrname" type="text" placeholder="Enter Username" name="uname" required>
-              <label id="l-passwd" for="psw"><b>Password</b></label>
-              <input id="t-passwd" type="password" placeholder="Enter Password" name="psw" required>
-              <button class="loginbutton" type="submit">Login</button>
+            <div id="login-forgot">
+              <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
-            <div id="loginfooter">
-              <div id="cb1">
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </div>
-              <div id="f-passwd">
-                <span class="psw">Forgot <a href="#">password?</a></span>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
+    </div><!-- modal login dialog -->
 
 
+  </div><!-- .container-fluid .main-container -->
 
 
-
-    <div id="info-wrapper"> </div>
-
-    <div id="game-wrapper"> </div>
-
-  </div>
-
+  <!-- Footer -->
   <div class="container-fluid footer-container">
     <div class="footer-sub">
       <div class="left-side">
@@ -105,37 +84,13 @@
   </div><!-- .container-fluid .footer-container -->
 
 
+  <!-- Firebase init (firebase-app.js, products & init.js order) -->
+  <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
 
-
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyA3TqYiyT4gE11k0ZSWZf0sVl5Q7gWwQto",
-      authDomain: "bootcamp-6ad6e.firebaseapp.com",
-      databaseURL: "https://bootcamp-6ad6e.firebaseio.com",
-      projectId: "bootcamp-6ad6e",
-      storageBucket: "bootcamp-6ad6e.appspot.com",
-      messagingSenderId: "915239186690",
-      appId: "1:915239186690:web:f5e9faadef74ed0401521b"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-
-
-
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+  <!-- Helper libs (jQuery, Popper & Bootstrap order) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
@@ -147,7 +102,6 @@
   <!-- Custom JavaScript -->
   <script src="./assets/js/firestore.js"></script>
   <script src="./assets/js/app.js"></script>
-
 
 </body>
 
