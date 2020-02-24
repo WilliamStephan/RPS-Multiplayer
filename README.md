@@ -2,7 +2,7 @@
 
 javaScript homework for full stack development bootcamp UT-Austin (UT-VIRT-FSF-PT-11-2019-U-LOL)
 
-Another relatively simple project morphing into something a bit more complicated. What started as a two person rock, paper scissor game became a mass player game using Google's Firebase products. Here's an outline…
+Another relatively simple project morphing into something a bit more complicated. What started as a two person rock, paper scissor game became a MMO game using Google's Firebase products. Here's an outline…
 
 it is deployed here using [Google hosting](https://bootcamp-6ad6e.firebaseapp.com).
 
