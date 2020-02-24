@@ -18,11 +18,11 @@ it is deployed here using [Google hosting](https://bootcamp-6ad6e.firebaseapp.co
 
 * Up to 100 players at a time (limited by Google's free account).
 * Full Firebase email authentication implemented for login credentials.
-* Win, loss or tie notification via score and local chat notification – bot chat and scores are not transmitted via database minimizing database traffic.
-* Score history is stored in and retrieved from in user profile documents.
+* Win, loss or tie notification via score and local chat notification – bot chat and bot scores are not transmitted via minimizing database traffic.
+* Score history is stored in, and retrieved from user profile documents.
 * User’s IP address is logged, and location data is stored in user profile documents. 
 * Mass chat functionality for all online users.
-* Distributed background processes emulate server functionality (FireStore implemented in frontend only).
-* Background processes are scaled based on user demand.
+* Distributed background processes emulate backend server functionality (FireStore implemented in frontend only).
+* Background processes are scaleable based on user demand.
 * Full responsive design, runs on mobile devices.
 * Matrix scoring and results single line algorithm – no if or else statements required. 
